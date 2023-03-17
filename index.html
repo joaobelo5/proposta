@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+		background-color: pink;
+		font-family: Arial, sans-serif;
+	}
+
+	h2 {
+		color: purple;
+	}
+
+	ol li {
+		font-size: 18px;
+	}
+
+	input[type="radio"] {
+		margin-right: 10px;
+	}
+
+	label {
+		color: navy;
+		font-weight: bold;
+	}
+
+	button[type="submit"] {
+		background-color: navy;
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+
+	button[type="submit"]:hover {
+		background-color: #001f3f;
+	}
+</style>
+
+	<title>Proposta para o meu benzinho</title>
+	<script>
+		function processarFormulario(evento) {
+			evento.preventDefault();
+
+			var radioSim = document.getElementById("sim");
+			var radioNao = document.getElementById("nao");
+			var resposta = "";
+			if (radioSim.checked) {
+				resposta = "Sim";
+			} else if (radioNao.checked) {
+				resposta = "Não";
+			}
+
+			if (resposta === "Sim") {
+				alert("Telefone: 61 98195-2994\nE-mail: joaobelo5@gmail.com");
+				window.location.href = "https://youtu.be/KHWjajpYs1I";
+			} else if (resposta === "Não") {
+				window.location.href = "https://www.youtube.com/shorts/RUZWgwpUkTM";
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>NOME_DELA, meu coração bate por você,</p>
+	<p>Seus olhos brilham como o sol no amanhecer,</p>
+	<p>Seu sorriso me faz sentir tão bem,</p>
+	<p>Com você ao meu lado, eu sou alguém.</p>
+	<h2>Contrato de Namoro</h2>
+	<p>Eu, Gordão Professores, por meio deste contrato, declaro que desejo iniciar um relacionamento amoroso com NOME_DELA.</p>
+	<p>Cláusulas:</p>
+	<ol>
+		<li>Prometo a NOME_DELA receber muito amor e carinho, fazendo-a se sentir amada todos os dias.</li>
+		<li>Prometo fazer de NOME_DELA a pessoa mais feliz do mundo, trazendo felicidade e alegria à sua vida sempre que possível.</li>
+	</ol>
+	<form onsubmit="processarFormulario(event)">
+		<p>Você aceita os termos?</p>
+		<input type="radio" id="sim" name="aceita" value="sim" required>
+		<label for="sim">Sim</label><br>
+		<input type="radio" id="nao" name="aceita" value="nao">
+		<label for="nao">Não</label><br>
+		<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>
